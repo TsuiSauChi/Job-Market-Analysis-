@@ -1,4 +1,3 @@
-from helper import glassdoor_api
 from helper import file_to_json, json_to_file, volin_plot
 from db import db_init
 
@@ -7,8 +6,8 @@ import numpy as np
 
 import sqlite3
 
-freq= 35
-search = "Software Developer"
+freq= 2000
+search = "data"
 medium = 8000
 
 data = []
@@ -95,7 +94,7 @@ ax.legend(legend_handles, legend_labels, title='Skill Important Based on >$8000 
 # Add labels and title
 ax.set_xlabel('Skill Set')
 ax.set_ylabel('No of Company Looking for Skillset')
-ax.set_title('Realtionship between Skillset popularity and importance')
+ax.set_title('Realtionship between Skillset popularity and importance (For frequency > 2000)')
 
 # Show the plot
 plt.tight_layout()
